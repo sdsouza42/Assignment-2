@@ -1,0 +1,23 @@
+<%- include("templates/header") %>
+
+<div class="container mt-5">
+  <h2>Admin Panel</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>User Type</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <%- include("templates/user", { user: user }) %>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<%- include("templates/footer") %>
+
